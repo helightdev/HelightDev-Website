@@ -1,0 +1,23 @@
+{
+    "name": "Christoph Feuerer",
+    "short_name": "Christoph Feuerer",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#194064",
+    "theme_color": "#e9626c",
+    "description": "helight.dev personal website",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

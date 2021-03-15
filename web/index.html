@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Christoph Feuerer"/>
+  <meta property="og:description" content="Fullstack Software Developer" />
+  <meta property="og:type" content="profile"/>
+  <meta property="profile:first_name" content="Christoph"/>
+  <meta property="profile:last_name" content="Feuerer"/>
+  <meta property="profile:username" content="HelightDev"/>
+  <meta property="profile:gender" content="male"/>
+
+  <!-- Base Meta -->
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#e9626c">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="helight.dev personal website">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Christoph Feuerer">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Christoph Feuerer</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- PWA Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('flutter-first-frame', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
