@@ -15,17 +15,20 @@ class SkillWidget extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          SelectableText(headline, style: theme.textTheme.headline4.copyWith(foreground: Paint()..shader=LinearGradient(colors: [
+          SelectableText(headline, style: theme.textTheme.headline4.copyWith(fontSize: 36,foreground: Paint()..shader=LinearGradient(colors: [
             Color(0xFF266A7A),
             Color(0xFF194064)
           ]).createShader(Rect.fromLTWH(0,0, 200, 40)))),
-          SelectableText(description, style: theme.textTheme.subtitle1, textAlign: TextAlign.center,),
+          SelectableText(description, style: theme.textTheme.subtitle1.copyWith(fontSize: 21), textAlign: TextAlign.center,),
           Row(children: images.map((e) => Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 32),
             child: Image(image: e),
           )).toList(), mainAxisAlignment: MainAxisAlignment.center),
           Container(
-            child: SelectableText(technologies, style: theme.textTheme.bodyText2, textAlign: TextAlign.center,),
+            child: Padding(
+              padding: const EdgeInsets.all(6),
+              child: SelectableText(technologies, style: theme.textTheme.bodyText2.copyWith(fontSize: 21), textAlign: TextAlign.center,),
+            ),
             decoration: BoxDecoration(
                 color: Color(0xFFFAFAFA),
                 borderRadius: BorderRadius.circular(16),

@@ -61,7 +61,7 @@ class Work extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    var goldenBar = size.height * goldenRatioSmall;
+    var goldenBar = size.height * 0.45;
     var theme = Theme.of(context);
     return Scaffold(
       body: Scrollbar(
@@ -92,18 +92,8 @@ class Work extends StatelessWidget {
                           ), flex: 23, fit: FlexFit.tight,),
                           Flexible(child: Column(
                             children: [
-                              SelectableText("Christoph Feuerer", style: theme.textTheme.headline3.copyWith(color: Colors.white.withOpacity(.90)),),
-                              SelectableText("Fullstack Software Developer", style: theme.textTheme.headline5.copyWith(color: Colors.white.withOpacity(0.87)),),
-                              SelectableText("""
-                              
-Hello there! I'm Christoph Feuerer a german 17 year old a self-taught Fullstack Developer, Geek and music enthusiast. 
-At the young age of 14 I started developing game modification for the popular voxel game Minecraft, where I was 
-involved with mayor german community-servers serving over 1000 players simultaneously and gathered lots of backend 
-and fronted related experience from there and also came into first contact with docker. After that and a short time of 
-freelancing as well as learning, I joined Skylines One LLC. My major tasks here at Skylines are primarily REST-API 
-Development, App & Web Development, as well as Framework & API Development and DevOps. I'm currently also 
-working on the GameModding-Framework Synapse for the Unity-based game SCP: Secret Laboratory
-                              """, style: theme.textTheme.bodyText1.copyWith(color: Colors.white.withOpacity(0.95)))
+                              SelectableText("Christoph Feuerer", style: theme.textTheme.headline3.copyWith(fontSize: 42, color: Colors.white),),
+                              SelectableText("Fullstack Software Developer", style: theme.textTheme.headline5.copyWith(fontSize: 36,color: Colors.white.withOpacity(0.85)),),
                             ],
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -114,6 +104,20 @@ working on the GameModding-Framework Synapse for the Unity-based game SCP: Secre
                   ],
                 )
             ),
+            Container(height: 32,),
+            Text("Hello there!", style: theme.textTheme.headline3.copyWith(color: Colors.black.withOpacity(.85)), textAlign: TextAlign.center),
+            SelectableText("""
+                              
+I'm Christoph Feuerer a german 17 year old self-taught Fullstack Developer, Geek and music enthusiast. 
+
+At the young age of 14 I started developing game modification for the popular voxel game Minecraft, 
+where I was involved with mayor german community-servers serving over 1000 players simultaneously 
+and gathered lots of backend & fronted experience from there.
+
+After that I joined Skylines One LLC. My major tasks here at Skylines are primarily REST, Api/Framework, 
+App & Web Development, as well as DevOps. I'm currently also working on the GameModding-Framework Synapse
+for the Unity-based game SCP: Secret Laboratory
+                              """, style: theme.textTheme.bodyText1.copyWith(fontSize: 21,color: Colors.black.withOpacity(1)), textAlign: TextAlign.center,),
             Stack(
               children: [
                 Positioned(

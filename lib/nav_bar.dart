@@ -53,7 +53,7 @@ class NavigationBar extends StatelessWidget {
             ),
           ),
           Container(
-            constraints: BoxConstraints.expand(width: 400),
+            constraints: BoxConstraints.expand(width: 500),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -63,7 +63,7 @@ class NavigationBar extends StatelessWidget {
                   uri: Uri.parse("https://skylines.one/"),
                   builder: (BuildContext context, Future<void> Function() followLink) {
                     return GestureDetector(
-                      child: HoverTextStateful(text: "Work"),
+                      child: HoverTextStateful(text: "Work!"),
                       onTap: followLink,
                     );
                   },
@@ -83,7 +83,7 @@ class NavigationBar extends StatelessWidget {
                   uri: Uri.parse("/#about"),
                   builder: (BuildContext context, Future<void> Function() followLink) {
                     return GestureDetector(
-                      child: HoverTextStateful(text: "About"),
+                      child: HoverTextStateful(text: "About me"),
                       onTap: () => Navigator.pushNamed(context, "about"),
                     );
                   },
